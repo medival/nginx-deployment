@@ -1,0 +1,24 @@
+appname:
+  name: nginx
+
+namespace:
+  name: demo
+
+service:
+  port: 8111
+  type: LoadBalancer
+
+image: 
+  repository: nginx
+  tag: alpine
+  pullPolicy: IfNotPresent
+
+replicaCount: 3
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 256Mi
+
+configmap:
+  data: "version: alpine"
