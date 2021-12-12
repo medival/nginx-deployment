@@ -1,15 +1,12 @@
-appname:
-  name: nginx
-
 namespace:
   name: demo
-
+ 
 service:
   port: 8111
-  type: LoadBalancer
+  type: ClusterIP
 
-image: 
-  repository: nginx
+image:
+  repository: nginx 
   tag: alpine
   pullPolicy: IfNotPresent
 
